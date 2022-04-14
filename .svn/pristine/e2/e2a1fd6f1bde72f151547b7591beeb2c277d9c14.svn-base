@@ -1,0 +1,27 @@
+package app;
+
+import java.io.IOException;
+import java.util.function.Function;
+
+public abstract class Writer {
+  private boolean open = true;
+  private Function<String, String> operation = text -> text; //Feedback: text -> text to Function.identity()
+
+  Writer() {}
+
+  Writer(Function<String, String> lowerCaseOperation) {
+    operation = lowerCaseOperation;
+  }
+
+  void write(String text) throws IOException {
+    if (open) {
+      writeContents(operation.apply(text));
+    }
+  }
+
+  abstract protected void writeContents(String text) throws IOException;
+
+  void close() {
+    open = false;
+  }
+}

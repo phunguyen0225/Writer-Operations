@@ -1,0 +1,83 @@
+package app;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public abstract class OperationTest  {
+
+  private Operation operation;
+
+  abstract Operation createOperation();
+
+  @BeforeEach
+  public void init() {
+    operation = createOperation();
+  }
+
+  @Test
+  void transformhello() {
+    assertEquals(operation.convert("hello"), operation.convert("hello"));
+  }
+
+  @Test
+  void transformHello() {
+    assertEquals(operation.convert("hello"), operation.convert("Hello"));
+  }
+
+  @Test
+  void transformHeL1o() {
+    assertEquals(operation.convert("hel1o"), operation.convert("HeL1o"));
+  }
+
+  @Test
+  void StringwriteheLLoAndClose() throws IOException {
+    StringWriter writer = new StringWriter(operation::convert);
+
+    writer.write("heLLo");
+    writer.close();
+
+    assertEquals(operation.convert("hello"), writer.getContents());
+  }
+
+  @Test
+  void StringwriteHIclosewritethEre() throws IOException {
+    StringWriter writer = new StringWriter(operation::convert);
+
+    writer.write("HI");
+    writer.close();
+    writer.write("thEre");
+
+    assertEquals(operation.convert("hi"), writer.getContents());
+  }
+
+  @Test
+  void FilewriteheLLoAndClose() throws IOException {
+    FileWriter writer = new FileWriter("myfile.txt", operation::convert);
+
+    writer.write("heLLo");
+    writer.close();
+
+    assertEquals(operation.convert("hello"), Files.readString(Path.of("myfile.txt")));
+  }
+
+  @Test
+  void FilewriteHIclosewritethEre() throws IOException {
+    FileWriter writer = new FileWriter("myfile.txt", operation::convert);
+
+    writer.write("HI");
+    writer.close();
+    writer.write("thEre");
+
+    assertEquals(operation.convert("hi"), Files.readString(Path.of("myfile.txt")));
+  }
+
+  @AfterEach
+  public void deleteFileCreatedInTests() throws IOException {
+    Files.deleteIfExists(Path.of("myfile.txt"));
+  }
+}

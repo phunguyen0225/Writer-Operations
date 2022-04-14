@@ -1,0 +1,31 @@
+package app;
+
+import java.io.IOException;
+
+public abstract class Writer {
+  private boolean open = true;
+  private LowerCaseOperation lowerCaseOperation;
+
+  Writer() {}
+
+  Writer(LowerCaseOperation operation) {
+    lowerCaseOperation = operation;
+  }
+
+  void write(String text) throws IOException {
+    if (open) {
+      if (lowerCaseOperation != null) {
+        writeContents(lowerCaseOperation.executeOperation(text));
+      }
+      else {
+        writeContents(text);
+      }
+    }
+  }
+
+  abstract protected void writeContents(String text) throws IOException;
+
+  void close() {
+    open = false;
+  }
+}

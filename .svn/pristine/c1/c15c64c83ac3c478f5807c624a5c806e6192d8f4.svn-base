@@ -1,0 +1,10 @@
+package app;
+
+public class LowerCaseTest  extends OperationTest{
+  LowerCaseOperation lowerCaseOperation = new LowerCaseOperation();
+
+  @Override
+  Operation createOperation() {
+    return lowerCaseOperation;
+  }
+}

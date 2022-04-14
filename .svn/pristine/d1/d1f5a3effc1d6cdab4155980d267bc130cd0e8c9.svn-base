@@ -1,0 +1,164 @@
+[Reviewed 04/12/22 04:57 AM EDT]
+synopsis: let's move forward
+
+details: 
+
+Please see suggestions in tests.txt.
+
+------------------------------------------------------------------------------
+[Reviewed 04/11/22 21:24 PM EDT]
+synopsis: let's move forward
+
+details: 
+
+Let's move forward, let's write the other two functions mentioned in assign4.txt.
+
+------------------------------------------------------------------------------
+[Reviewed 04/11/22 18:23 PM EDT]
+synopsis~: let's keep it DRY
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/11/22 15:39 PM EDT]
+synopsis~: YAGNI
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/10/22 20:48 PM CDT]
+synopsis: let's keep it DRY
+
+details: 
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 04/10/22 05:45 AM CDT]
+synopsis~: let's take the next small step
+
+details: 
+
+Let's take the next small step.
+
+------------------------------------------------------------------------------
+[Reviewed 04/09/22 06:17 AM CDT]
+synopsis~: reduce error, reduce effort, reduce error for the user
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/08/22 19:36 PM CDT]
+synopsis: why use an instance when the method is static?
+
+details: 
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 04/08/22 07:17 AM CDT]
+synopsis~: let's improve a little
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/07/22 12:18 PM MDT]
+synopsis: let's rework the tests
+
+details: 
+
+Please see suggestions in code.
+
+Let's take the next small step.
+
+------------------------------------------------------------------------------
+[Reviewed 04/06/22 13:21 PM MDT]
+synopsis: too much code, no incremental evolution
+
+details: 
+
+Too much code and not an incremental evolution from the previous step.
+
+------------------------------------------------------------------------------
+[Reviewed 04/06/22 02:25 AM MDT]
+synopsis~: red or yellow in coverage, let's try this again
+
+details:
+Please make sure to run coverage and make sure there is no red or yellow in the coverage report. If there is red or yellow please fix it or ask for help to fix it. Once the coverage report shows 100%, we can move forward with the reviews.
+
+------------------------------------------------------------------------------
+[Reviewed 04/04/22 20:49 PM MDT]
+synopsis: nice work
+
+details: 
+
+Nice work. Please see suggestions in code.
+
+Let's move forward to the next step.
+
+------------------------------------------------------------------------------
+[Reviewed 04/03/22 05:17 AM MDT]
+synopsis~: let's clean up, let's keep it DRY
+
+details: 
+
+After the tests are run, let us make sure we do not leave behind the myfile.txt file.
+
+Let's keep code DRY.
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/22 13:07 PM MDT]
+synopsis: let's take the next step
+
+details: 
+
+Please see suggestions in code.
+
+Let's take the next step.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/22 11:58 AM MDT]
+synopsis~: a few things to improve
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/22 09:48 AM MDT]
+synopsis~: let's evolve instead of jumping in
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 04/02/22 05:05 AM MDT]
+synopsis~: red or yellow in coverage, let's try this again
+
+details:
+Please make sure to run coverage and make sure there is no red or yellow in the coverage report. If there is red or yellow please fix it or ask for help to fix it. Once the coverage report shows 100%, we can move forward with the reviews.
+
+------------------------------------------------------------------------------

@@ -1,0 +1,207 @@
+[Reviewed 03/09/22 10:28 AM MST]
+synopsis: you're done
+
+details: 
+
+yay
+
+------------------------------------------------------------------------------
+[Reviewed 03/09/22 03:20 AM MST]
+synopsis~: nice work so far
+
+details: 
+
+Nice work so far. Please see suggestions in code.
+
+Let us integrate the code to the GUI so that the GUI picks a random work and also handles wrong spelling properly.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 03/08/22 09:48 AM MST]
+synopsis~: red or yellow in coverage, let's try this again
+
+details:
+Please make sure to run coverage and make sure there is no red or yellow in the coverage report. If there is red or yellow please fix it or ask for help to fix it. Once the coverage report shows 100%, we can move forward with the reviews.
+
+------------------------------------------------------------------------------
+[Reviewed 03/07/22 17:39 PM MST]
+synopsis: good work so far
+
+details: 
+
+Good work so far.
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 03/07/22 02:36 AM MST]
+synopsis~: let us honor SRP
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 03/06/22 10:19 AM MST]
+synopsis~: please see previous review
+
+details: 
+
+please see previous review.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 03/05/22 19:17 PM MST]
+synopsis: good so far
+
+details: 
+
+Good so far.
+
+That completes the design of the logic. Now, let us move on to design the code that talks to the service.
+
+-getResponse takes a word as argument, calls the URL for the spell check service, and returns a text
+-parse takes "true" and returns true
+-parse takes "false" and returns false
+-isSpellingCorrect, given a word, calls getResponse, passes result of getResponse to parse, returns result of parse
+-isSpellingCorrect, given a word, passes the exception for Network Error from getResponse to the caller
+
+------------------------------------------------------------------------------
+[Reviewed 03/05/22 18:54 PM MST]
+synopsis: the behavior has to be meaningful
+
+details: 
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 03/05/22 07:07 AM MST]
+synopsis~: good so far
+
+details: 
+
+Good so far. Let's write one more test.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+------------------------------------------------------------------------------
+[Reviewed 03/04/22 17:36 PM MST]
+synopsis: let's clean up a few things
+
+details: 
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 03/03/22 18:59 PM MST]
+synopsis: let's clean up and move forward
+
+details: 
+
+Please see suggestions in code.
+
+------------------------------------------------------------------------------
+[Reviewed 03/02/22 05:52 AM MST]
+synopsis~: let's consider extensibility
+
+details: 
+
+Please see suggestions in code.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 03/01/22 12:26 PM MST]
+synopsis~: let's rethink about the approach
+
+details: 
+
+Please see suggestions in tests.txt.
+
+Here are a few tests as the next step:
+
+-play first attempt with FAVRO as guess calls display with 0 for numberOfAttempts, Status ERROR, message "not a word"
+-play second attempt with FVROA as guess calls display with 1 for numberOfAttempts, Status ERROR, message "not a word"
+Please keep in mind the design goals: "Design in a way that if we decide to check the spelling using a different service in the future... rest of the details in assign2.txt..."
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 03/01/22 06:03 AM MST]
+synopsis~: let's refactor and move forward
+
+details: 
+
+Please see suggestions in code.
+
+Please see suggestions in tests.txt.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 02/28/22 16:05 PM MST]
+synopsis~: let's clean up the GUI a bit
+
+details: 
+
+In the GUI, let us get rid of the "Enter Word:" and the textbox next to it.
+When user types after the GUI pops up we want the character to appear in the top row cells.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 02/28/22 07:40 AM MST]
+synopsis: let's make sure code follows good separation of concerns
+
+details: 
+
+Please see suggestions in code.
+
+Also, let us do the next review only after fixing the GUI. Right now pressing a key does not display it in the GUI.
+
+------------------------------------------------------------------------------
+[Reviewed 02/27/22 17:53 PM MST]
+synopsis: let's refactor
+
+details: 
+
+Please see suggestions in code.
+
+Also, let's explore why the GUI does not work properly on the Mac.
+
+------------------------------------------------------------------------------
+[Reviewed 02/27/22 05:27 AM MST]
+synopsis~: did not find the tests.txt file
+
+details: 
+
+Did not find the tests.txt file.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------
+[Reviewed 02/26/22 14:59 PM MST]
+synopsis: let's refactor
+
+details: 
+
+Please see suggestions in code.
+
+Also, let's explore why the GUI does not work properly on the Mac.
+
+------------------------------------------------------------------------------
+[Reviewed 02/26/22 05:55 AM MST]
+synopsis~: let's get the build set up properly
+
+details: 
+
+Let's make sure the CI build is passing. When build fails please fix or ask for help.
+
+Please take a look at the build.sh in your assign1 repository. Then the one in your assign2 repository. Walk through them, think about what each one of them does and if everything it needs is in place.
+
+Let's do a quick review after these changes. Please modify the requestReview.txt file and check it in as soon as you are ready and I will do a review well before the next scheduled review cycle.
+
+------------------------------------------------------------------------------

@@ -1,0 +1,96 @@
+Assign4: Due 11:59PM CT April 15
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+Use Test First Development technique to develop this design and code.
+Do not include any main (or Main). Only your code and test code is
+needed. Follow proper directory structure. This assignment involves
+more thinking than typing. You are not going to write a lot of code.
+But you have to figure out how to write that little code you will 
+write.
+
+There are two kinds of Writers: StringWriter which writes to a String
+and FileWriter that writes to a file (these are not related to 
+those classes provided in Java/C#, etc.). There can be other types of
+Writers (like SocketWriter that writes to a Socket) in the future.
+
+A Writer simply writes to a target (like string or file) until close
+is called. Any effort to write after the call to close is simply 
+ignored.
+
+You can find out what was written to a StringWriter by calling a
+function. You can find out what was written to a file using a 
+FileWriter by reading the file written to.
+
+There are several types of operations that can be performed on these
+two (or other types added in the future) writers. For example:
+
+lower case: This converts the string being written to all lower case
+
+upper case: This converts the string being written to all upper case
+
+stupid remover: This replaces the word stupid (only in lower case) to s*****
+
+duplicate remover: This removes consecutive duplicated words. For example, 
+"This is is it" will replaced by "This is it" when this function is applied.
+
+Design so that other such functions may be added in the future, but 
+without changing any existing class.
+
+The user of your design will pick and choose what kinds of operations
+they want to use or combine to use. For example, I may be interested
+in combining the stupid remover and the lower case operation when
+writing to a String. I may also be interested in combining the
+duplicate remover and the upper case operation when writing to
+a file. I may chose to use any combination of these operations
+at will.
+
+You can imagine an operation like this (pseudocode):
+
+writeToWriter(Writer writer) {
+  writer.write("This is really really stupid!!!")
+  writer.close();
+}
+
+If I had combined the operations of duplicate remover, stupid remover,
+and if the writer is targeting a file (say myfile.dat), then the file
+myfile.dat would contain the content
+
+This is really s*****!!!
+
+Please ask for many reviews. Start small, and early. Write only one
+or two tests and ask for review. Make incremental change and learn 
+along the way. Don't try to take a long jump.
+
+Once you complete coding, please answer the following:
+
+1. What design principles did you use in this assignment? Discuss.
+
+There were a few principles that we applied during this project which are the DRY, SRP, YAGNI, OCP, LSP, DIP, SLAP
+
+We use applied DRY almost everywhere inside our project, but mainly in the test folder. In the src folder, we applied DRY in the StringWriter and FileWriter classes. Instead of implementing its own constructor, we call the super() to use the implementation in the base class. 
+
+In the test folder, we raise the abstraction for the tests of operation. Instead of writing every test cases for every operation, we created an abstract class OperationTest and have abstract methods that return inputs for different operation tests. The DRY helped us reduce our code and effort. 
+
+The SRP principle helped us separate our code into different classes and interfaces, each class serves one sepcific function. This principle can help ease of code change, readability, and understandability. The SRP helped us raise the abstraction of Writer and OperationTest into a abstract class, and any class that extends from it can override methods and implement it's own implementation.
+
+
+
+
+
+2. What design patterns did you use in this assignment? Discuss.
+
+One pattern that we saw during this project is the Compose Method Pattern. A Compose Method Pattern said "A method should be composed of instractions at a single level of abstraction". We use this pattern to help writing our method short, understandable, easy to maintain and reuse. This also help with high cohesion and lowering the coupling.
+
+3. Any surprises or things that you did not expect or learned specifically in this assignment?
+
+There were a few things during the assignment that we did not expect and learned specifically in this assignment is that the differences between abstract classes and interfaces, Function<> and lamba expression ::, SafeVarargs, returning our own input and output in the test cases. 
+
+During the first few implementation of the assignment, we use interfaces to create a Writer, but there were a few problem implementing the close() function because interfaces are immutable, therefore we can't change our private boolean variables inside the interface. Instead we create an abstract Writer class and it was more easier use in our case. 
+
+The next thing that surprises us is the Function<> and the lambda expression we could apply. We have all of our Operations in different interfaces, each serve it's single responsibility but each have the same static String convert(...) method. To apply the function, in the abstract class we created a private final Function<> and we have a Writer constructor that takes the operation function is a parameter and can apply in the write() function that we have. 
+
+SafeVarargs...
+
+In the test folder, one thing that surprise us is that we have an abstract class OperationTest and abstract methods that return inputs for different tests. Any class that extends from OperationTest will override the method and return it's own output. This help us by not duplicating our code and be flexible of what we can return as an input.

@@ -1,0 +1,43 @@
+package app;
+
+public class LowerCaseTest extends OperationTest {
+  @Override
+  String convert(String text) {
+    return LowerCaseOperation.convert(text);
+  }
+
+  @Override
+  String outputTransformhello() {
+    return "hello";
+  }
+
+  @Override
+  String outputTransformHeL1o() {
+    return "hel1o";
+  }
+
+  @Override
+  StringWriter createStringWriter() {
+    return new StringWriter(LowerCaseOperation::convert);
+  }
+
+  @Override
+  FileWriter createFileWriter() {
+    return new FileWriter("myfile.txt", LowerCaseOperation::convert);
+  }
+
+  @Override
+  String outputConvertheLLo() {
+    return "hello";
+  }
+
+  @Override
+  String inputConvertHi() {
+    return "HI";
+  }
+
+  @Override
+  String outputConvertHi() {
+    return "hi";
+  }
+}

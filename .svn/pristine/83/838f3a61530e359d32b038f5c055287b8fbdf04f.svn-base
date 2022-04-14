@@ -1,0 +1,107 @@
+Assign3: Due 11:59PM CT April 1
+
+***Please review the top part of ../hw1/hw1.txt***
+***Your chance of success greatly increases if you start very early. Your chance of failure increases if you start late. Please use as many reviews as you possibly can.***
+
+The Fibonacci series of numbers start with 1, 1, 2, 3, 5, 8, 13, 21, ...
+where values at position 0 and 1 are 1, and values at each position after
+that are a sum of values at the previous two positions.
+
+Write four implementations of a function to compute the Fibonacci number at a given position.
+
+Please start with one implementation at a time rather than rushing through all
+of them at the same time.
+
+The four implementations are described below:
+
+1. An imperative iteration. 
+  Given a position n, loop through totaling values until you reach the value for the given position.
+
+2. A functional iteration. 
+	  Given a position n, loop through totaling values until you reach the value for the given position. Avoid explicit mutability.
+
+3. A simple recursion.
+  Given a position, compute the value at a position using the expression fib(n - 1) + fib(n - 2).
+
+4. A memoized recursion.
+  Given a position, look up to see if the value has been precomputed and if so return that value. Otherwise, use recursion to compute the value.
+  
+Confirm that the memoized version is faster than the recursive version.
+
+Reuse as much code as possible.
+
+Please bring forward the practices, techniques, and tools you have learned so far. This includes: 
+Good code quality
+Lightweight design
+Minimum code
+Automated testing                                                         
+Code coverage
+Continuous integration
+
+Once you complete coding, please answer the following:
+
+1. What design principles did you use in this assignment? Discuss.
+
+There were a few principles that we applied during this project, which are the DRY, SRP, YAGNI, OCP, LSP, and DIP principles.
+
+When we first started this assignment, we did not follow the YAGNI principle and implemented a lot of code that did not need at that time.
+This principle helped us to keep our code simple and minimum. So, it would be easier for us to evolve our code later on.
+
+We used the DRY principle to help reduce our code and effort mainly in the test folder.
+The DRY principle helped us write one single class to hold test cases for every function we test, instead of writing the same test cases in every single class that we create. 
+This helped us reduce our code and prevent copying and pasting every time we create a function to test our code.
+This also raised the abstraction of the test, we created an interface that holds test cases, each class that wants to use these test cases will just have to implement and return the function for that particular class.
+Another time that we followed the DRY principle is when we reused code from SimpleRecursion to MemoizedRecursion, and thus we avoided duplicating code.
+ 
+Secondly, the SRP principle helped us separate our code into different classes, and each class serves one specific function for it. 
+This principle can help ease code change, readability, and understandability. 
+The SRP principle also helped us raise the abstraction of Fibonacci into an interface, which separates each class when they implement the Fibonacci interface method.
+
+Next, we applied the Open-Closed Principle by implementing an interface Fibonacci instead of a class. 
+And then, we used polymorphism to implement this interface for the specific object that we want to create.
+OCP helped us to minimize the impact of violating other principles, thus, this helped our code easier to maintain and extend in the future.
+
+Another one is LSP, we followed this principle by implementing the MemoizedRecursion extends from SimpleRecursion.
+We implemented MemoziedRecursion as a derived class to substitute the Base class SimpleRecursion.
+This principle also was being used by creating different implementations of Fibonacci that stand in for a Fibonacci interface.
+By using the inheritance and substitutability of LSP, we were able to make our classes are more substitutable, extendable, and reusable but not violating other principles.
+
+Lastly, we applied the DIP by creating FibonacciTest that depends on an interface Fibonacci. 
+So, for each implementation of the interface Fibonacci, we can have different implementations of FibonacciTest.
+This made our code easier to implement different test cases for different Fibonacci abstractions.
+
+DRY, SRP, YAGNI, OCP, LSP, and DIP were principles that we applied in this assignment, which helped our code simple, minimum, maintainable, and extendable.
+
+
+2. Any surprises or things that you did not expect?
+
+During the assignment, we have faced many things that we did not except. The more our code was extended, the more supprises we had.
+
+One of the things we have faced is that when we started to code, we tried to fix our code to follow one of the principles, our code did violate another principle.
+For instance, when we followed the SRP to create each test case for each implementation of Fibonacci, we violated the DRY principle.
+
+Another one is that we can separate fast tests from slow tests into two different test cases and that we can override the function not to return that particular test. 
+Also the use of "super" in the FibonacciMemoizedRecursion to call the Base class method instead of writing the Simple Recursion algorithm again to help solve our problem. 
+This helps us not only write cleaner and more understandable code but also not violate the DRY principle as well.
+
+The more our code is evolved, the more surprises we have to face. Thus, keeping track and following all principles are key to resolving that problem.
+
+
+
+Total [100]: 99
+
+All tests pass [20]:
+Test quality [20]:
+Coverage [10]: 
+Design quality for imperative, functional and recursive[10]:
+Design quality for memoized without duplication[10]:
+Test for speed comparison without duplication [10]:
+Code quality[5]:
+Response to question 1 [10]:
+-SRP
+-DRY
+-OCP
+-DIP
+-Multiple examples of DRY
+Response to question 2 [5]: -1
+Need to spellcheck.

@@ -1,0 +1,22 @@
+package app;
+
+public class StringWriter extends Writer {
+  private final StringBuilder target = new StringBuilder();
+
+  StringWriter() {
+    super();
+  }
+
+  StringWriter(LowerCaseOperation operation) {
+    super(operation);
+  }
+
+  @Override
+  protected void writeContents(String text) {
+    target.append(text);
+  }
+
+  public String getContents() {
+    return target.toString();
+  }
+}
