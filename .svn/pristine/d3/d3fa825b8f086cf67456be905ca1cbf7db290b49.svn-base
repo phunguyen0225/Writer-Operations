@@ -1,7 +1,0 @@
-package app;
-
-public interface LowerCaseOperation {
-  public static String convert(String text) {
-    return text.toLowerCase();
-  }
-}

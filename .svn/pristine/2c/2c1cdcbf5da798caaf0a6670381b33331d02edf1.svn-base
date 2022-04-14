@@ -1,6 +1,0 @@
-package app;
-
-public class UpperCaseOperation extends Operation{
-  @Override
-  String convert(String text) {return text.toUpperCase();}
-}

@@ -1,5 +1,0 @@
-package app;
-
-public abstract class Operation {
-  abstract String convert(String text);
-}

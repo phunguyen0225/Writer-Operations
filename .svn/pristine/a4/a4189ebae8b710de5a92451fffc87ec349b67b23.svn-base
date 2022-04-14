@@ -1,6 +1,0 @@
-package app;
-
-public class LowerCaseOperation extends Operation {
-  @Override
-  String convert(String text) {return text.toLowerCase();}
-}

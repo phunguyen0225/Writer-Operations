@@ -1,7 +1,0 @@
-package app;
-
-public class LowerCaseOperation {
-  public String executeOperation(String text) { //Feedback: static method since we are not using any state. convert instead of executeOperation
-    return text.toLowerCase();
-  }
-}
